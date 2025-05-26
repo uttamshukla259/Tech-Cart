@@ -40,10 +40,7 @@ const Login = () => {
             "The only way to do great work is to love what you do." - Steve Jobs
           </blockquote>
         </div>
-        <div className="image-container">
-          {/* Corrected: Reference image directly from public folder */}
-          <img src="/login12.jpg" alt="Tech Gadgets" className="tech-image" />
-        </div>
+        
       </div>
       <div className="right-side">
         <div className="auth-container">

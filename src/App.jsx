@@ -25,7 +25,7 @@ const App = () => {
           <Navbar query={query} setQuery={setQuery} />
           <div className="content">
             <Routes>
-              {/* <Route element={<PrivateComp />}> */}
+              <Route element={<PrivateComp />}>
                 <Route path="/" element={<Home query={query} />} />
                 <Route path="/wishlist" element={<Wishlist />} />
                 <Route path="/cart" element={<Cart />} />
@@ -33,7 +33,7 @@ const App = () => {
                 <Route path="/product/:id" element={<ProductDetails />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/confirmation" element={<Confirmation />} />
-              {/* </Route> */}
+              </Route> 
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
             </Routes>

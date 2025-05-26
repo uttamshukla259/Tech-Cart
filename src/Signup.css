@@ -1,4 +1,4 @@
-/* Base styles for the entire page container */
+
 .auth-split-page {
     display: flex;
     min-height: 100vh;
@@ -13,7 +13,7 @@
     border-radius: 0 12px 12px 0;
 }
 
-/* Shared left/right layout styles */
+
 .left-side,
 .right-side {
     display: flex;
@@ -25,21 +25,19 @@
     box-sizing: border-box;
 }
 
-/* Left-side content */
+
 .left-side {
-    /* background: rgba(255, 255, 255, 0.8); */
-   
     box-shadow: inset 4px 0 12px rgba(0, 0, 0, 0.1);
     border-radius: 0 12px 12px 0;
 }
 
-/* Right-side form */
+
 .right-side {
-    /* background-color: rgba(255, 255, 255, 0.95); */
+  
     border-radius: 12px 0 0 12px;
 }
 
-/* Site info content */
+
 .site-info {
     text-align: center;
     color: #2c3e50;
@@ -70,20 +68,14 @@
     border-left: 4px solid #4ca1af;
 
     background-color: rgba(255, 255, 255, 0.2);
-    /* translucent white */
     backdrop-filter: blur(8px);
-    /* blur background behind the element */
     -webkit-backdrop-filter: blur(8px);
-    /* Safari support */
-
+  
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Optional: subtle depth */
     transition: all 0.3s ease;
 }
-/* Image container */
 
-/* Auth form container */
 .auth-container {
     background-color: rgba(255, 255, 255, 0.15);
     
@@ -168,14 +160,14 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-/* Switch text */
+
 .auth-switch {
     margin-top: 30px;
     color: #777;
     font-size: 0.9em;
 }
 
-/* Auth link */
+
 .auth-link {
     color: #4ca1af;
     font-weight: bold;
@@ -188,7 +180,7 @@
     text-decoration: underline;
 }
 
-/* Mobile title */
+
 .mobile-title {
     display: none;
     color: #2c3e50;

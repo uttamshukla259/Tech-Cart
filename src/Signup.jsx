@@ -12,15 +12,12 @@ const Signup = () => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      // IMPORTANT: DO NOT use alert(). Use a custom modal or message box.
-      // For now, I'll keep it as alert for quick fix, but recommend replacing this.
       alert("Passwords do not match");
       return;
     }
 
     const userData = { email, password };
     localStorage.setItem("userData", JSON.stringify(userData));
-    // IMPORTANT: DO NOT use alert(). Use a custom modal or message box.
     alert("Signup successful!");
     navigate("/login");
   };
