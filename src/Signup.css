@@ -1,4 +1,8 @@
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 .auth-split-page {
     display: flex;
     min-height: 100vh;
@@ -77,6 +81,7 @@
 }
 
 .auth-container {
+    margin:10px;
     background-color: rgba(255, 255, 255, 0.15);
     
     backdrop-filter: blur(12px);
@@ -123,6 +128,7 @@
 
 /* Inputs */
 .auth-input {
+
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -193,8 +199,14 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    
     .auth-split-page {
+        margin-top: 50px;
+      
         flex-direction: column;
+   
+
+          
     }
 
     .left-side {
@@ -243,9 +255,7 @@
         padding: 20px;
     }
 
-    .auth-container {
-        padding: 20px;
-    }
+   
 
     .mobile-title {
         font-size: 1.6em;
@@ -255,6 +265,7 @@
     .auth-input {
         font-size: 0.95em;
         padding: 10px;
+       
     }
 
     .auth-button {

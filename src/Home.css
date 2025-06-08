@@ -1,16 +1,16 @@
 :root {
     --primary-color: #1a73e8;
-    /* A modern blue */
+    /* Modern blue */
     --secondary-color: #34a853;
-    /* A modern green */
+    /* Modern green */
     --background-color: #ffffff;
     /* White background */
     --text-color: #202124;
     /* Dark gray for text */
     --accent-color: #fbbc05;
-    /* A modern yellow for accents */
+    /* Modern yellow for accents */
     --error-color: #d93025;
-    /* A modern red for errors */
+    /* Modern red for errors */
     --hover-color: rgba(0, 0, 0, 0.1);
     /* Light hover effect */
 }
@@ -41,58 +41,48 @@
     line-height: 1.6;
 }
 
-/* Banner */
-.banner {
+/* Carousel Banner */
+.carousel-banner {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
     width: 100%;
     height: 350px;
-    overflow: hidden;
     border-radius: 12px;
+    overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
 }
 
-.banner-overlay {
-    display: flex;
+.carousel-slide {
+    position: relative;
     width: 100%;
     height: 100%;
 }
 
-.banner-image {
-    width: 50%;
+.carousel-image {
+    width: 100%;
+    height: 350px;
     object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-.banner-image:hover {
-    transform: scale(1.05);
-}
-
-.banner-text {
+.carousel-text {
     position: absolute;
     top: 50%;
     left: 8%;
     transform: translateY(-50%);
+    color: white;
     z-index: 1;
     text-align: left;
-    color: var(--background-color);
 }
 
-.banner-text h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
+.carousel-text h1 {
+    font-size: 2.5rem;
     font-weight: bold;
-    text-transform: uppercase;
-    color: var(--background-color);
+    margin-bottom: 10px;
 }
 
-.banner-text p {
+.carousel-text p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: var(--background-color);
+    max-width: 60%;
 }
 
 /* Products Section */
@@ -156,10 +146,13 @@
 }
 
 @media (max-width: 480px) {
-    .home-container {
-        padding: 10px;
+    .home-container h1 {
+        margin: 2px;
+        font-size: 1rem;   
     }
-
+        .home-container p{
+            font-size: 0.9rem; 
+        }
     .banner {
         height: 200px;
     }
@@ -171,8 +164,18 @@
     .banner-text p {
         font-size: 0.9rem;
     }
-
-    .products-container {
-        grid-template-columns: 1fr;
+     .home-products h2 {
+            font-size: 1rem; 
+          }
+    .skeleton-card {
+        padding: 10px;
     }
+        .carousel-banner {
+            width: 100%;
+            height: 120px;
+            
+        }
+                .carousel-image{
+                    height: 150px;
+                }
 }
