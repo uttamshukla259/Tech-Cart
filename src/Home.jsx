@@ -116,8 +116,7 @@ const Home = ({ query }) => {
 
   return (
     <div className="home-container">
-      <h1>Welcome to TechCart</h1>
-      <p>Your one-stop shop for all your favorite tech products.</p>
+      
 
       <div className="carousel-banner">
         <Slider {...sliderSettings}>
@@ -134,7 +133,6 @@ const Home = ({ query }) => {
       </div>
 
       <section className="home-products">
-        <h2>Featured Products</h2>
         <div className="products-container">
           {products.length > 0 ? (
             products
