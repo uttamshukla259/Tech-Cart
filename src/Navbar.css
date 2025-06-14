@@ -1,60 +1,36 @@
-/* Using variables from :root in Home.css for consistency */
 :root {
     --primary-brand: #3f51b5;
-    /* A deep, rich blue for main accents */
     --secondary-brand: #00bcd4;
-    /* A vibrant teal for secondary elements and highlights */
     --background-light: #f5f7fa;
-    /* Very light grey background */
     --text-dark: #212121;
-    /* Very dark grey for main text, strong contrast */
     --text-medium: #616161;
-    /* Medium grey for subheadings and descriptions */
     --text-light: #ffffff;
-    /* Pure white for text on dark backgrounds */
     --card-background: #ffffff;
-    /* Clean white background for product cards */
     --accent-yellow: #ffeb3b;
-    /* A bright yellow for call-to-action or special info */
     --error-red: #f44336;
-    /* Standard red for error messages */
-
     --shadow-light: rgba(0, 0, 0, 0.05);
-    /* Light shadow for subtle lift */
     --shadow-medium: rgba(0, 0, 0, 0.1);
-    /* Medium shadow for elevation */
     --shadow-strong: rgba(0, 0, 0, 0.18);
-    /* Stronger shadow for prominent elements */
-
     --border-radius-small: 5px;
     --border-radius-medium: 10px;
     --border-radius-large: 15px;
 }
 
-/* --- Navbar Base Styles --- */
 .navbar {
-    background:#222c2c;
-    /* Modern gradient background */
+    background: #222c2c;
     backdrop-filter: blur(12px);
-    /* Stronger blur for glassmorphism effect */
     -webkit-backdrop-filter: blur(12px);
     padding: 15px 30px;
-    /* Increased padding */
     color: var(--text-light);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    /* Stays at the top when scrolling */
     top: 0;
     z-index: 999;
-    /* Ensures it's always on top */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    /* Subtle border */
     box-shadow: 0 4px 20px var(--shadow-medium);
-    /* Prominent shadow for depth */
     font-family: 'Inter', sans-serif;
-    /* Consistent font */
 }
 
 .navbar-container {
@@ -64,51 +40,38 @@
     width: 100%;
 }
 
-/* --- Logo --- */
 .navbar-logo {
     font-size: 1.8rem;
-    /* Larger logo for better visibility */
     font-weight: bold;
     color: var(--accent-yellow);
-    /* Eye-catching brand color */
     text-decoration: none;
     letter-spacing: 1px;
     text-shadow: 1px 1px 3px var(--shadow-strong);
-    /* Subtle text shadow */
     transition: transform 0.3s ease-in-out;
 }
 
 .navbar-logo:hover {
     transform: scale(1.05);
-    /* Slight scale on hover */
 }
 
-/* --- Search Bar --- */
 .navbar-search {
     display: flex;
     flex-grow: 1;
-    /* Allows search bar to take available space */
     justify-content: center;
     margin: 0 40px;
-    /* More margin from sides */
     max-width: 600px;
-    /* Limit search bar width on large screens */
 }
 
 .navbar-search-input {
     padding: 10px 15px;
-    /* Increased padding */
     width: 100%;
-    /* Take full width of its container */
     border: none;
     border-radius: var(--border-radius-medium) 0 0 var(--border-radius-medium);
     background-color: rgba(255, 255, 255, 0.9);
-    /* Slightly transparent white */
     color: var(--text-dark);
     font-size: 1rem;
     transition: all 0.3s ease;
     box-shadow: inset 0 1px 3px var(--shadow-light);
-    /* Inner shadow for depth */
 }
 
 .navbar-search-input::placeholder {
@@ -119,16 +82,12 @@
 .navbar-search-input:focus {
     outline: none;
     background-color: var(--background-light);
-    /* Solid white on focus */
     box-shadow: 0 0 0 2px var(--secondary-brand);
-    /* Accent border on focus */
 }
 
 .navbar-search-btn {
     padding: 10px 18px;
-    /* Increased padding */
     background-color: var(--secondary-brand);
-    /* Vibrant button color */
     color: var(--text-light);
     border: none;
     border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0;
@@ -137,23 +96,17 @@
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 2px 0 8px var(--shadow-medium);
-    /* Shadow for button */
 }
 
 .navbar-search-btn:hover {
     background-color: #008c9e;
-    /* Slightly darker teal on hover */
     transform: translateY(-1px);
-    /* Slight lift effect */
 }
 
-/* --- Navigation Icons & Text --- */
 .navbar-icons {
     display: flex;
     gap: 25px;
-    /* More space between icons */
     list-style: none;
-    /* Remove bullet points */
     margin: 0;
     padding: 0;
 }
@@ -163,7 +116,6 @@
     align-items: center;
     cursor: pointer;
     position: relative;
-    /* For the cart count */
 }
 
 .navbar-item a {
@@ -171,74 +123,53 @@
     color: var(--text-light);
     display: flex;
     flex-direction: column;
-    /* Stack icon and text vertically */
     align-items: center;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-item a:hover {
     color: var(--accent-yellow);
-    /* Accent color on hover */
     transform: translateY(-2px);
-    /* Slight lift */
 }
 
 .navbar-icon {
     font-size: 24px;
-    /* Larger icons */
     margin-bottom: 4px;
-    /* Space between icon and text */
     color: inherit;
-    /* Inherit color from parent 'a' */
 }
 
 .navbar-text {
     font-size: 13px;
-    /* Smaller text for compact look */
     color: inherit;
-    /* Inherit color from parent 'a' */
     text-transform: uppercase;
-    /* Uppercase text */
     font-weight: 500;
     white-space: nowrap;
-    /* Prevent text wrapping */
 }
 
-/* Cart count badge */
 .count {
     background-color: var(--error-red);
-    /* Red for notifications */
     color: var(--text-light);
     border-radius: 50%;
     width: 20px;
-    /* Larger badge */
     height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    /* Readable font size */
     font-weight: bold;
     position: absolute;
     top: -5px;
-    /* Position above icon */
     right: -10px;
-    /* Position to the right of icon */
     z-index: 1;
     border: 1px solid var(--text-light);
-    /* Small white border */
 }
 
-/* Logout Button Styling */
 .logout-btn {
     background: none;
-    /* Make it transparent */
     border: none;
     font: inherit;
-    /* Inherit font styles from parent */
     cursor: pointer;
     color: var(--text-light);
-    /* White color */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -247,11 +178,9 @@
 
 .logout-btn:hover {
     color: var(--error-red);
-    /* Red on hover for logout */
     transform: translateY(-2px);
 }
 
-/* --- Modal Styles (for Logout Confirmation) --- */
 .modal {
     position: fixed;
     top: 0;
@@ -259,35 +188,26 @@
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.7);
-    /* Darker overlay */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     animation: fadeInModal 0.3s ease-out;
-    /* Fade-in modal animation */
 }
 
 .modal-content {
     background: var(--card-background);
-    /* White background */
     padding: 30px;
-    /* More padding */
     border-radius: var(--border-radius-large);
-    /* Larger rounded corners */
     text-align: center;
     width: 90%;
     max-width: 450px;
-    /* Increased max-width */
     box-shadow: 0px 8px 30px var(--shadow-strong);
-    /* Stronger shadow */
     animation: zoomInModal 0.3s ease-out;
-    /* Zoom-in modal animation */
 }
 
 .modal h5 {
     font-size: 1.5rem;
-    /* Larger heading */
     font-weight: bold;
     margin-bottom: 15px;
     color: var(--text-dark);
@@ -295,7 +215,6 @@
 
 .modal p {
     font-size: 1rem;
-    /* Clearer text */
     margin-bottom: 25px;
     color: var(--text-medium);
 }
@@ -304,12 +223,10 @@
     display: flex;
     justify-content: space-around;
     gap: 15px;
-    /* Increased gap */
 }
 
 .modal-button {
     padding: 12px 25px;
-    /* More substantial buttons */
     border: none;
     border-radius: var(--border-radius-medium);
     cursor: pointer;
@@ -317,36 +234,30 @@
     font-weight: 600;
     transition: all 0.3s ease;
     flex: 1;
-    /* Allow buttons to take equal space */
 }
 
 .modal-button.confirm {
     background: var(--accent-color);
-    /* Green for confirm */
     color: var(--text-light);
     box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
 }
 
 .modal-button.cancel {
     background: var(--error-red);
-    /* Red for cancel */
     color: var(--text-light);
     box-shadow: 0 4px 10px rgba(220, 53, 69, 0.2);
 }
 
 .modal-button.confirm:hover {
     background: #218838;
-    /* Darker green on hover */
     transform: translateY(-2px);
 }
 
 .modal-button.cancel:hover {
     background: #c82333;
-    /* Darker red on hover */
     transform: translateY(-2px);
 }
 
-/* --- Animations --- */
 @keyframes fadeInModal {
     from {
         opacity: 0;
@@ -369,14 +280,9 @@
     }
 }
 
-
-/* --- Responsive Design for Navbar --- */
-
-/* Tablet and smaller desktop (up to 1024px) */
 @media (max-width: 1024px) {
     .navbar {
         padding: 10px 20px;
-        /* Slightly reduced padding */
     }
 
     .navbar-logo {
@@ -385,45 +291,36 @@
 
     .navbar-search {
         margin: 0 20px;
-        /* Adjusted margin */
         max-width: 450px;
     }
 
     .navbar-search-input,
     .navbar-search-btn {
         padding: 8px 12px;
-        /* Smaller padding */
         font-size: 0.95rem;
     }
 
     .navbar-icons {
         gap: 15px;
-        /* Closer icons */
     }
 
     .navbar-icon {
         font-size: 22px;
-        /* Slightly smaller icons */
     }
 
     .navbar-text {
         font-size: 12px;
-        /* Smaller text labels */
     }
 }
 
-/* Mobile (up to 768px) */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
-        /* Keep as a single row */
         align-items: center;
         justify-content: space-between;
         padding: 8px 10px;
-        /* More compact padding for mobile */
         height: auto;
         flex-wrap: nowrap;
-        /* Prevent wrapping unless absolutely necessary */
     }
 
     .navbar-container {
@@ -432,69 +329,48 @@
         justify-content: space-between;
         width: 100%;
         gap: 8px;
-        /* Small gap between search and icons */
     }
 
     .navbar-logo {
         display: none;
-        /* Hide logo on mobile */
     }
 
     .navbar-search {
         flex-grow: 2;
-        /* Allow search bar to take more space (e.g., 2/3) */
         margin: 0;
-        /* Remove specific margins, use gap on parent */
         max-width: none;
-        /* Remove desktop max-width constraint */
         min-width: 150px;
-        /* Ensure search bar is not too small */
     }
 
     .navbar-search-input {
         width: 100%;
         font-size: 0.75rem;
-        /* Smaller font */
         padding: 6px 8px;
-        /* More compact padding */
     }
 
     .navbar-search-btn {
         padding: 6px 10px;
-        /* More compact padding */
         font-size: 0.75rem;
     }
 
     .navbar-icons {
         flex-grow: 1;
-         
         flex-basis: auto;
-       
         width: auto;
-       
         justify-content: space-around;
-        
-        gap: 0px;
-       
         margin: 0;
-       
         padding: 0;
         border-top: none;
         flex-shrink: 0;
-        
     }
 
- 
     .navbar-item a {
         flex-direction: column;
-      
         font-size: 0.65rem;
-       
     }
 
     .navbar-icon {
         font-size: 10px;
-       
     }
 
     .navbar-text {
@@ -503,14 +379,12 @@
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 35px;
-      
     }
 
     .count {
         width: 14px;
         height: 14px;
         font-size: 8px;
-        /* Smaller count text */
         top: -1px;
         right: -4px;
     }
@@ -520,21 +394,17 @@
     }
 }
 
-/* Smaller Mobile (up to 480px) */
 @media (max-width: 480px) {
     .navbar {
         padding: 3px 4px;
-        
     }
 
     .navbar-container {
         gap: 5px;
-        
     }
 
     .navbar-search {
         min-width: 150px;
-        
     }
 
     .navbar-search-input {
@@ -546,8 +416,6 @@
         padding: 4px 6px;
         font-size: 0.7rem;
         width: 50px;
-       
-      
     }
 
     .navbar-item a {
@@ -561,7 +429,6 @@
     .navbar-text {
         font-size: 0px;
         max-width: 30px;
-        
     }
 
     .count {
