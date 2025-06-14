@@ -1,5 +1,5 @@
 .card {
-    width: 250px;
+    width: 280px;
     position: relative;
     background: #fff; 
     backdrop-filter: blur(10px);          
@@ -9,7 +9,7 @@
     transition: all 0.3s;
     display: flex;
     flex-direction: column;
-    border: 0.2px solid rgba(255, 255, 255, 0.4); 
+    border: 2px solid var(--secondary-brand); 
     border-radius: 0.5rem;
     box-shadow: 0 8px 32px rgba(149, 154, 172, 0.2);
     text-align: center; 
@@ -91,15 +91,16 @@ h1 {
 button {
   outline: none;
    border-radius: 1rem; 
- border: 1px solid #d9d9d9; 
+ border: 1px solid #fefefe; 
   background: none;
   padding: 4px 10px;
-  color: #515151;
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-right: 10px;
   margin-top: 5px;
-  background-color: rgb(212, 183, 17);
+  background-color: var(--secondary-brand);
 }
 
 button:hover {
@@ -140,7 +141,7 @@ button:hover {
     width: 80%;
   }
   .card {
-    width: 170px;
+    width: 185px;
     
     position: relative;
     background: whitesmoke;
